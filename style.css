@@ -15,7 +15,7 @@
 }
 
 .calculator {
-    background: #3a4452;
+    background:#627660;
     padding: 20px;
     border-radius: 10px;
 }
@@ -45,6 +45,8 @@ form .display input{
     flex: 1;
     font-size: 45px;
     box-shadow: none;
+    border: 2px solid #4FB7B8;
+   
 }
 
 /* equal button will take the place of two buttons*/
@@ -54,5 +56,14 @@ form input.equal{
 
 /* first horizontal and last vertical collumn input will be different color*/
 form input.operator{
-    color: #33ffd8;
+    color: #4FB7B8;
+}
+
+/* In this code, the :not([type="text"]) selector is used to exclude the display input (type="text") 
+from the hover effect. This way, only the buttons will change color when hovered, while the display 
+input will remain unaffected.*/
+
+.calculator form input:not([type="text"]):hover {
+    background-color: #4FB7B8;
+    color: #000;
 }
